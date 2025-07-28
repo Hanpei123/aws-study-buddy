@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Study Buddy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>AWS Study Buddy</h1>
+        <p>Your personal AI-powered exam coach for mastering AWS certifications.</p>
+    </header>
+    <main>
+        <!-- Setup Section -->
+        <section id="setup-section" class="card">
+            <h2>Get Started</h2>
+            <p>Upload your study materials and tell us about your exam goals.</p>
+            <div class="form-group">
+                <label for="exam-date">Exam date:</label>
+                <input type="date" id="exam-date">
+            </div>
+            <div class="form-group">
+                <label for="study-style">Study style:</label>
+                <select id="study-style">
+                    <option value="balanced">Balanced</option>
+                    <option value="flashcard">Flashcard‑focused</option>
+                    <option value="quiz">Quiz‑focused</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="study-days">Days per week:</label>
+                <input type="number" id="study-days" min="1" max="7" value="4">
+            </div>
+            <div class="form-group">
+                <label for="file-upload">Upload study materials (txt, csv):</label>
+                <input type="file" id="file-upload" multiple accept=".txt,.csv">
+            </div>
+            <button id="generate-btn">Generate Flashcards & Plan</button>
+            <div id="setup-message" class="message"></div>
+        </section>
+
+        <!-- Plan Section -->
+        <section id="plan-section" class="card hidden">
+            <h2>Your Study Plan</h2>
+            <p id="plan-description"></p>
+            <div id="plan-table"></div>
+        </section>
+
+        <!-- Flashcard Section -->
+        <section id="flashcard-section" class="card hidden">
+            <h2>Flashcards</h2>
+            <div id="flashcard-display" class="flashcard-display"></div>
+            <button id="show-answer-btn" class="hidden">Show Answer</button>
+            <button id="next-flashcard-btn" class="hidden">Next</button>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz-section" class="card hidden">
+            <h2>Quiz</h2>
+            <div id="quiz-display" class="quiz-display"></div>
+            <input type="text" id="quiz-answer" class="hidden" placeholder="Your answer">
+            <button id="submit-quiz-btn" class="hidden">Submit Answer</button>
+            <button id="next-quiz-btn" class="hidden">Next Question</button>
+            <div id="quiz-feedback" class="message"></div>
+        </section>
+
+        <!-- Chat Section -->
+        <section id="chat-section" class="card hidden">
+            <h2>Ask Your Study Buddy</h2>
+            <div id="chat-window" class="chat-window"></div>
+            <div class="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Ask a question...">
+                <button id="chat-send-btn">Send</button>
+            </div>
+        </section>
+
+        <!-- Pro Section -->
+        <section id="pro-section" class="card">
+            <h2>Upgrade to Pro</h2>
+            <p>Unlock unlimited uploads, GPT‑powered exam simulations and intelligent review paths.</p>
+            <button id="upgrade-btn">Learn More</button>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
