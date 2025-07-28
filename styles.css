@@ -1,0 +1,133 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #232f3e;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+/* Main container */
+main {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Form elements */
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+input[type="date"],
+input[type="number"],
+input[type="file"],
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  padding: 8px 14px;
+  margin: 6px 4px;
+  background-color: #0073bb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* Study plan table */
+#planSection {
+  margin-top: 20px;
+}
+
+#planTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#planTable th,
+#planTable td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+#planTable th {
+  background-color: #f0f0f0;
+}
+
+/* Flashcard section */
+#flashcardSection, #quizSection, #chatSection {
+  margin-top: 20px;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+#flashcard {
+  font-size: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  min-height: 60px;
+  white-space: pre-line;
+  margin-bottom: 12px;
+}
+
+#quizContainer #question {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#feedback {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Chat section */
+#chatMessages {
+  height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fafafa;
+}
+
+#chatMessages p {
+  margin: 4px 0;
+}
+
+#chatMessages strong {
+  color: #0073bb;
+}
